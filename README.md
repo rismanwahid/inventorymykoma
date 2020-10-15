@@ -1,0 +1,2 @@
+# inventorymykoma
+sistem inventory merupakan sistem yang mengelola data barang masuk dan barang keluar bahan baku yang ada pada mykoma. Sistem ini mengelola data pegawai yang dapat mengakses sistem ini, data bahan baku, data suplier, data menu, data resep, data pembelian, data barang keluar serta menyajikan  laporan pembelian, laporan barang keluar, laporan ketersedian barang, laporan menu dan laporan perencanaan bahan baku.
