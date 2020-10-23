@@ -2,9 +2,10 @@
 include '../../database.php';
 $suplier = $_POST['suplier'];
 
-echo "<option value=''>Pilih Bahan Baku</option>";
+echo "<option value=''>Pilih Bahan Baku</option>
+<option value='Tambah Bahan Baku'>Tambah Bahan Baku</option>";
 
-$query = "SELECT bahan_bk.nm_bahanbk,bahan_bk.id_suplier FROM bahan_bk WHERE id_suplier='$suplier' GROUP BY bahan_bk.nm_bahanbk ORDER BY nm_bahanbk ASC";
+$query = "SELECT bahan_bk.nm_bahanbk,bahan_bk.id_suplier FROM bahan_bk WHERE id_suplier='$suplier' GROUP BY nm_bahanbk ORDER BY nm_bahanbk ASC";
 $dewan1 = $db->prepare($query);
 $dewan1->bind_param("i", $suplier);
 $dewan1->execute();

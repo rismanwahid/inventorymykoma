@@ -55,4 +55,4 @@ foreach ($query as $item) {
 }
 
 
-$pdf->Output("Resep Obat.pdf", "I");
+$pdf->Output("Resep Menu.pdf", "I");

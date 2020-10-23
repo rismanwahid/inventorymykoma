@@ -6,16 +6,27 @@ if (isset($_POST['simpan'])) {
     $suplier   = $_POST['suplier'];
     $kd_bahan = $_POST['kd_bahan'];
     $bahanbk   = $_POST['bahanbk'];
+    $nw_bhnbk   = $_POST['nw_bhnbk'];
     $qty = $_POST['qty'];
     $harga  = $_POST['harga'];
     $tgl_exp  = $_POST['tgl_exp'];
     $id_pegawai  = $_POST['id_pgw'];
 
-    mysqli_query($db, "INSERT INTO pembelian(id_pembelian,id_suplier,kd_bahanbk,tgl_beli,jumlah,harga,id_pegawai,tgl_exp) VALUES ('$id_bl','$suplier','$kd_bahan','$tgl_bl','$qty','$harga','$id_pegawai','$tgl_exp')");
+    if ($bahanbk == 'Tambah Bahan Baku') {
+        mysqli_query($db, "INSERT INTO pembelian(id_pembelian,id_suplier,kd_bahanbk,tgl_beli,jumlah,harga,id_pegawai,tgl_exp) VALUES ('$id_bl','$suplier','$kd_bahan','$tgl_bl','$qty','$harga','$id_pegawai','$tgl_exp')");
 
-    mysqli_query($db, "INSERT INTO bahan_bk(kd_bahanbk,id_suplier,nm_bahanbk,tgl_expire) VALUES ('$kd_bahan','$suplier','$bahanbk','$tgl_exp')");
+        mysqli_query($db, "INSERT INTO bahan_bk(kd_bahanbk,id_suplier,nm_bahanbk,tgl_expire) VALUES ('$kd_bahan','$suplier','$nw_bhnbk','$tgl_exp')");
 
-    mysqli_query($db, "INSERT INTO stok(kd_bahanbk,stok) VALUES ('$kd_bahan','$qty')");
+        mysqli_query($db, "INSERT INTO stok(kd_bahanbk,stok) VALUES ('$kd_bahan','$qty')");
+    } else {
+
+        mysqli_query($db, "INSERT INTO pembelian(id_pembelian,id_suplier,kd_bahanbk,tgl_beli,jumlah,harga,id_pegawai,tgl_exp) VALUES ('$id_bl','$suplier','$kd_bahan','$tgl_bl','$qty','$harga','$id_pegawai','$tgl_exp')");
+
+        mysqli_query($db, "INSERT INTO bahan_bk(kd_bahanbk,id_suplier,nm_bahanbk,tgl_expire) VALUES ('$kd_bahan','$suplier','$bahanbk','$tgl_exp')");
+
+        mysqli_query($db, "INSERT INTO stok(kd_bahanbk,stok) VALUES ('$kd_bahan','$qty')");
+    }
+
 
     echo "<script>alert('Data Berhasil Tersimpan')</script>";
     echo "<script>window.location='index.php?page=pembelian'</script>";
@@ -75,7 +86,7 @@ if (isset($_POST['simpan'])) {
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>ID Bahan Baku</label>
+                                <!-- <label>ID Bahan Baku</label> -->
                                 <?php
 
                                 $sql1  = "SELECT max(kd_bahanbk) AS terakhirpas FROM bahan_bk";
@@ -87,13 +98,27 @@ if (isset($_POST['simpan'])) {
                                 $nextid1     = "BAHAN-" . sprintf("%04s", $nexturut1);
 
                                 ?>
-                                <input type="text" class="form-control" name="kd_bahan" value="<?php echo  $nextid1; ?>" readonly>
+                                <input type="hidden" class="form-control" name="kd_bahan" value="<?php echo  $nextid1; ?>" readonly>
                             </div>
-                            <div class="form-group">
+                            <script type="text/javascript">
+                                function yesnoCheck(that) {
+                                    if (that.value == "Tambah Bahan Baku") {
+                                        document.getElementById("nw_bhnbk").style.display = "block";
+
+                                    } else {
+                                        document.getElementById("nw_bhnbk").style.display = "none";
+                                    }
+                                }
+                            </script>
+                            <div class="form-group" id="selectbk" style="display: block;">
                                 <label>Bahan Baku</label>
-                                <select name="bahanbk" id="bahanbk" class="form-control" required>
+                                <select name="bahanbk" id="bahanbk" class="form-control" onchange="yesnoCheck(this);">
                                     <option value=""></option>
                                 </select>
+                            </div>
+                            <div class="form-group" id="nw_bhnbk" style="display: none">
+                                <label>Nama Bahan Baku</label>
+                                <input type="text" name="nw_bhnbk" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Qty</label>
@@ -108,8 +133,8 @@ if (isset($_POST['simpan'])) {
                                 <input type="date" name="tgl_exp" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>ID Pegawai</label>
-                                <input type="text" name="id_pgw" value="<?php echo $_SESSION['id_pegawai']; ?>" class="form-control" readonly>
+                                <!-- <label>ID Pegawai</label> -->
+                                <input type="hidden" name="id_pgw" value="<?php echo $_SESSION['id_pegawai']; ?>" class="form-control" readonly>
                             </div>
                         </div>
                         <!-- /.card-body -->

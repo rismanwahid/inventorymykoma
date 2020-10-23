@@ -66,12 +66,12 @@ if (isset($_POST['simpan'])) {
                                 <input type="text" class="form-control" name="kd_menu" value="<?php echo  $nextid1; ?>" readonly>
                             </div>
                             <div class="form-group">
-                                <label>ID Kategori</label>
-                                <input type="text" name="kd_kategorii" value="<?php echo $ouput['kd_kategori']; ?>" class="form-control" readonly>
+                                <!-- <label>ID Kategori</label> -->
+                                <input type="hidden" name="kd_kategorii" value="<?php echo $ouput['kd_kategori']; ?>" class="form-control" readonly>
                             </div>
                             <div class="form-group">
-                                <label>Kategori Menu</label>
-                                <input type="text" name="nm_kategori" value="<?php echo $ouput['nm_kategori']; ?>" class="form-control" readonly>
+                                <!-- <label>Kategori Menu</label> -->
+                                <input type="hidden" name="nm_kategori" value="<?php echo $ouput['nm_kategori']; ?>" class="form-control" readonly>
                             </div>
                             <div class="form-group">
                                 <label>Nama Menu</label>

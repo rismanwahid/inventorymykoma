@@ -65,8 +65,8 @@ if (isset($_POST['simpan'])) {
                                 <input type="date" name="tgl_ambil" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>KD Bahan Baku</label>
-                                <input type="text" id="kd_bkout" name="kd_bk" class="form-control" readonly>
+                                <!-- <label>KD Bahan Baku</label> -->
+                                <input type="hidden" id="kd_bkout" name="kd_bk" class="form-control" readonly>
                             </div>
                             <label>Bahan Baku</label>
                             <div class="form-group input-group">
@@ -76,8 +76,8 @@ if (isset($_POST['simpan'])) {
                                 </span>
                             </div>
                             <div class="form-group">
-                                <label>ID Pegawai</label>
-                                <input type="text" name="id_pgw" value="<?php echo $_SESSION['id_pegawai'] ?>" class="form-control" readonly>
+                                <!-- <label>ID Pegawai</label> -->
+                                <input type="hidden" name="id_pgw" value="<?php echo $_SESSION['id_pegawai'] ?>" class="form-control" readonly>
                             </div>
                             <div class="form-group">
                                 <label>Qty</label>
@@ -168,7 +168,7 @@ if (isset($_POST['simpan'])) {
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                            <a href="index.php?page=menu&kd_kategori=<?php echo $kd_kategori; ?>" class="btn btn-danger">Kembali</a>
+                            <a href="index.php?page=pengambilan" class="btn btn-danger">Kembali</a>
                             <button type="submit" name="simpan" class="btn btn-success">Simpan</button>
                         </div>
                     </form>

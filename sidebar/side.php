@@ -137,13 +137,30 @@
       <?php } ?>
       <?php if ($_SESSION['level'] == 'Owner') { ?>
         <li class="nav-item">
-          <a href="pages/widgets.html" class="nav-link">
-            <i class="nav-icon fas fa-copy"></i>
-            <p>
-              Laporan
-            </p>
+          <a href="index.php?page=ceklapmenu" class="nav-link">
+            <i class="far fa-file-pdf nav-icon"></i>
+            <p>Laporan Menu</p>
           </a>
         </li>
+        <li class="nav-item">
+          <a href="index.php?page=ceklapbeli" class="nav-link">
+            <i class="far fa-file-pdf nav-icon"></i>
+            <p>Laporan Pembelian</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link">
+            <i class="far fa-file-pdf nav-icon"></i>
+            <p>Laporan Bahan Baku</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link">
+            <i class="far fa-file-pdf nav-icon"></i>
+            <p>Perencanaan Bahan Baku</p>
+          </a>
+        </li>
+
       <?php } ?>
     </ul>
   </nav>

@@ -63,8 +63,8 @@ if (isset($_POST['simpan'])) {
                                 <input type="text" class="form-control" name="kd_resep" value="<?php echo  $nextid1; ?>" readonly>
                             </div>
                             <div class="form-group">
-                                <label>KD Menu</label>
-                                <input type="text" id="kd_menursp" name="kd_menu" class="form-control" readonly>
+                                <!-- <label>KD Menu</label> -->
+                                <input type="hidden" id="kd_menursp" name="kd_menu" class="form-control" readonly>
                             </div>
                             <label>Nama Menu</label>
                             <div class="form-group input-group">
@@ -75,8 +75,8 @@ if (isset($_POST['simpan'])) {
                                 </span>
                             </div>
                             <div class="form-group">
-                                <label>KD Bahan Baku</label>
-                                <input type="text" id="kd_bkrs" name="kd_bk" class="form-control" readonly>
+                                <!-- <label>KD Bahan Baku</label> -->
+                                <input type="hidden" id="kd_bkrs" name="kd_bk" class="form-control" readonly>
                             </div>
                             <label>Bahan Baku</label>
                             <div class="form-group input-group">

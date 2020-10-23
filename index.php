@@ -208,6 +208,10 @@ function rupiah($angka)
           include 'modules/pengambilan/tambah.php';
         } elseif ($_GET['page'] == 'detambil') {
           include 'modules/pengambilan/detail.php';
+        } elseif ($_GET['page'] == 'ceklapmenu') {
+          include 'modules/lapmenu/view.php';
+        } elseif ($_GET['page'] == 'ceklapbeli') {
+          include 'modules/lapbeli/view.php';
         } elseif ($_GET['page'] == 'beranda') {
           include 'modules/beranda/view.php';
         }
