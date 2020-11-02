@@ -132,7 +132,7 @@ function rupiah($angka)
             } ?>
           </a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#"><i class="fa fa-key"></i> Ganti Password</a>
+            <a class="dropdown-item" href="index.php?page=gantipas"><i class="fa fa-key"></i> Ganti Password</a>
             <a class="dropdown-item" href="index.php?aksi=logout"><i class="fa fa-sign-out-alt"></i> Log Out</a>
           </div>
         </li>
@@ -143,7 +143,7 @@ function rupiah($angka)
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="index3.html" class="brand-link">
+      <a href="index.php?page=beranda" class="brand-link">
         <img src="asets/dist/img/logomykoma.png" alt="Mykoma Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">Mykoma Inventory</span>
       </a>
@@ -212,6 +212,12 @@ function rupiah($angka)
           include 'modules/lapmenu/view.php';
         } elseif ($_GET['page'] == 'ceklapbeli') {
           include 'modules/lapbeli/view.php';
+        } elseif ($_GET['page'] == 'ceklapbk') {
+          include 'modules/lapbk/view.php';
+        } elseif ($_GET['page'] == 'rencanabk') {
+          include 'modules/rencana_bk/view.php';
+        } elseif ($_GET['page'] == 'gantipas') {
+          include 'modules/beranda/gantipass.php';
         } elseif ($_GET['page'] == 'beranda') {
           include 'modules/beranda/view.php';
         }

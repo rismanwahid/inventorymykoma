@@ -100,14 +100,11 @@
      <?php if ($_SESSION['level'] == 'Owner') { ?>
        <div class="col-12 col-sm-6 col-md-3">
          <div class="info-box">
-           <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
-
+           <a href="index.php?page=ceklapmenu" class="info-box-icon bg-info elevation-1" data-toggle="tooltip" data-placement="bottom" title="Cek Laporan Menu">
+             <span><i class="fas fa-file-pdf"></i></span>
+           </a>
            <div class="info-box-content">
-             <span class="info-box-text">CPU Traffic</span>
-             <span class="info-box-number">
-               10
-               <small>%</small>
-             </span>
+             <span class="info-box-text">Laporan Menu</span>
            </div>
            <!-- /.info-box-content -->
          </div>
@@ -116,11 +113,11 @@
        <!-- /.col -->
        <div class="col-12 col-sm-6 col-md-3">
          <div class="info-box mb-3">
-           <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
-
+           <a href="index.php?page=ceklapbeli" class="info-box-icon bg-danger elevation-1" data-toggle="tooltip" data-placement="bottom" title="Cek Laporan Pembelian">
+             <span><i class="fas fa-file-pdf"></i></span>
+           </a>
            <div class="info-box-content">
-             <span class="info-box-text">Likes</span>
-             <span class="info-box-number">41,410</span>
+             <span class="info-box-text">Laporan Pembelian</span>
            </div>
            <!-- /.info-box-content -->
          </div>
@@ -133,11 +130,11 @@
 
        <div class="col-12 col-sm-6 col-md-3">
          <div class="info-box mb-3">
-           <a href="" class="info-box-icon bg-success elevation-1" data-toggle="tooltip" data-placement="bottom" title="Lihat Resep">
-             <span><i class="fas fa-shopping-cart"></i></span>
+           <a href="index.php?page=ceklapbk" class="info-box-icon bg-success elevation-1" data-toggle="tooltip" data-placement="bottom" title="Cek Laporan Bahan Baku">
+             <span><i class="fas fa-file-pdf"></i></span>
            </a>
            <div class="info-box-content">
-             <span class="info-box-text">Laporan</span>
+             <span class="info-box-text">Laporan Bahan Baku</span>
            </div>
            <!-- /.info-box-content -->
          </div>
@@ -146,11 +143,12 @@
        <!-- /.col -->
        <div class="col-12 col-sm-6 col-md-3">
          <div class="info-box mb-3">
-           <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
-
+           <a href="index.php?page=rencanabk" class="info-box-icon bg-warning elevation-1" data-toggle="tooltip" data-placement="bottom" title="Cek Perencanaan Bahan Baku">
+             <span><i class="fas fa-file-pdf"></i></span>
+           </a>
            <div class="info-box-content">
-             <span class="info-box-text">New Members</span>
-             <span class="info-box-number">2,000</span>
+             <span class="info-box-text">Perencanaan</span>
+             <span class="info-box-text">Bahan Baku</span>
            </div>
            <!-- /.info-box-content -->
          </div>

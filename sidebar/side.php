@@ -149,13 +149,13 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link">
+          <a href="index.php?page=ceklapbk" class="nav-link">
             <i class="far fa-file-pdf nav-icon"></i>
             <p>Laporan Bahan Baku</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link">
+          <a href="index.php?page=rencanabk" class="nav-link">
             <i class="far fa-file-pdf nav-icon"></i>
             <p>Perencanaan Bahan Baku</p>
           </a>
